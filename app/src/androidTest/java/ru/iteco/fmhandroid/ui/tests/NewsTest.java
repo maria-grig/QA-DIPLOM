@@ -8,6 +8,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import io.qameta.allure.android.runners.AllureAndroidJUnit4;
+import io.qameta.allure.kotlin.junit4.DisplayName;
 import ru.iteco.fmhandroid.ui.AppActivity;
 import ru.iteco.fmhandroid.ui.pages.Logged;
 import ru.iteco.fmhandroid.ui.pages.LoginPage;
@@ -34,16 +35,19 @@ public class NewsTest extends NewsPage {
     }
 
     @Test
+    @DisplayName("#45 Создание новости")
     public void shouldCreateNews() {
         createNews();
     }
 
     @Test
+    @DisplayName("#46 Удаление новости")
     public void shouldDeleteNews() {
         deleteNews();
     }
 
     @Test
+    @DisplayName("# 50 Отмена создания новости")
     public void shouldNotCreateNews() {
         notCreateNews();
     }

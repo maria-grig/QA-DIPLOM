@@ -8,6 +8,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import io.qameta.allure.android.runners.AllureAndroidJUnit4;
+import io.qameta.allure.kotlin.junit4.DisplayName;
 import ru.iteco.fmhandroid.ui.AppActivity;
 import ru.iteco.fmhandroid.ui.pages.FilterClaimPage;
 import ru.iteco.fmhandroid.ui.pages.Logged;
@@ -35,6 +36,7 @@ public class FilterClaimTest extends EspressoBaseTest {
     }
 
     @Test
+    @DisplayName("#22 Смена статуса Открыта → Выполняется")
     public void changeOpenToInProgressStatus() {
         String text = "Open";
         String oldStatus = "take to work";
@@ -43,6 +45,7 @@ public class FilterClaimTest extends EspressoBaseTest {
         filterClaimPage.changeOpen(text, oldStatus, newStatus);
     }
     @Test
+    @DisplayName("#23 Смена статуса Открыта → Отменена")
     public void changeOpenToCanceledStatus() {
         String text = "Open";
         String oldStatus = "Cancel";
@@ -51,6 +54,7 @@ public class FilterClaimTest extends EspressoBaseTest {
         filterClaimPage.changeOpen(text, oldStatus, newStatus);
     }
     @Test
+    @DisplayName("#24 Смена статуса Выполняется → Открыта")
     public void changeInProgressToOpenStatus() {
         String oldStatus = "Throw off";
         String newStatus = "Open";
@@ -59,6 +63,7 @@ public class FilterClaimTest extends EspressoBaseTest {
     }
 
     @Test
+    @DisplayName("#25 Смена статуса Выполняется → Выполнена")
     public void changeInProgressToExecutedStatus() {
         String oldStatus = "To execute";
         String newStatus = "Executed";

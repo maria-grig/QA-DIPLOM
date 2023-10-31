@@ -8,6 +8,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import io.qameta.allure.android.runners.AllureAndroidJUnit4;
+import io.qameta.allure.kotlin.junit4.DisplayName;
 import ru.iteco.fmhandroid.ui.AppActivity;
 import ru.iteco.fmhandroid.ui.pages.CitationPage;
 import ru.iteco.fmhandroid.ui.pages.Logged;
@@ -32,6 +33,7 @@ public class CitationsTest extends CitationPage {
     }
 
     @Test
+    @DisplayName("#51 Просмотр карточки цитаты")
     public void openFullCitation() {
         openCitations();
         fullCitations();

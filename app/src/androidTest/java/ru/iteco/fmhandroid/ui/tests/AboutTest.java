@@ -9,6 +9,7 @@ import org.junit.rules.TestRule;
 import org.junit.runner.RunWith;
 
 import io.qameta.allure.android.runners.AllureAndroidJUnit4;
+import io.qameta.allure.kotlin.junit4.DisplayName;
 import ru.iteco.fmhandroid.ui.AppActivity;
 import ru.iteco.fmhandroid.ui.data.ScreenshotTestWatcher;
 import ru.iteco.fmhandroid.ui.pages.AboutPage;
@@ -39,21 +40,25 @@ public class AboutTest extends AboutPage {
     }
 
     @Test
+    @DisplayName("#53 Отображение версии приложения")
     public void displayVersion() {
         version();
     }
 
     @Test
+    @DisplayName("#54 Редирект на политику конфиденциальности")
     public void openPageWithPrivacyPolicy() {
         privacyPolicy();
     }
 
     @Test
+    @DisplayName("#55 Редирект на пользовательское соглашение")
     public void openPageWithTermsOfUse() {
         termsOfUse();
     }
 
     @Test
+    @DisplayName("#56 Отображение держателя авторских прав")
     public void displayCopyright() {
         copyright();
     }
