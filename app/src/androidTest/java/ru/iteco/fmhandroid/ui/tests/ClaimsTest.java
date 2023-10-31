@@ -2,14 +2,13 @@ package ru.iteco.fmhandroid.ui.tests;
 
 
 import androidx.test.ext.junit.rules.ActivityScenarioRule;
-import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-
+import io.qameta.allure.android.runners.AllureAndroidJUnit4;
 import ru.iteco.fmhandroid.ui.AppActivity;
 import ru.iteco.fmhandroid.ui.pages.ClaimPage;
 import ru.iteco.fmhandroid.ui.pages.DetailedClaimPage;
@@ -17,7 +16,7 @@ import ru.iteco.fmhandroid.ui.pages.Logged;
 import ru.iteco.fmhandroid.ui.pages.LoginPage;
 import ru.iteco.fmhandroid.ui.utils.EspressoBaseTest;
 
-@RunWith(AndroidJUnit4.class)
+@RunWith(AllureAndroidJUnit4.class)
 public class ClaimsTest extends EspressoBaseTest {
     Logged logged = new Logged();
     LoginPage loginPage = new LoginPage();

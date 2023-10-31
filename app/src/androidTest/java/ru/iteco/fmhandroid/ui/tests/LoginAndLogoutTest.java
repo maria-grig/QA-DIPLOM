@@ -1,20 +1,19 @@
 package ru.iteco.fmhandroid.ui.tests;
 
 import androidx.test.ext.junit.rules.ActivityScenarioRule;
-import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-
-import ru.iteco.fmhandroid.ui.pages.Logged;
-import ru.iteco.fmhandroid.ui.pages.LoginPage;
+import io.qameta.allure.android.runners.AllureAndroidJUnit4;
 import ru.iteco.fmhandroid.R;
 import ru.iteco.fmhandroid.ui.AppActivity;
+import ru.iteco.fmhandroid.ui.pages.Logged;
+import ru.iteco.fmhandroid.ui.pages.LoginPage;
 
-@RunWith(AndroidJUnit4.class)
+@RunWith(AllureAndroidJUnit4.class)
 
 public class LoginAndLogoutTest extends LoginPage {
     LoginPage loginPage = new LoginPage();
